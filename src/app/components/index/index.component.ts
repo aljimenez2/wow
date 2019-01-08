@@ -9,8 +9,9 @@ import {ClassesService} from '../../services/classes.service';
 })
 export class IndexComponent implements OnInit {
 
+  public _classes: {};
   constructor(private Classes: ClassesService) {
-    this.Classes.getClassesIndex().then(res => console.log(res));
+     this.Classes.getClassesIndex().then(res => this._classes = res);
   }
 
   ngOnInit() {

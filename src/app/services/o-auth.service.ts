@@ -26,7 +26,7 @@ export class OAuthService {
       }
     ).pipe(
       map(res => {
-        return res.access_token;
+        return res;
       })
     ).toPromise();
   }
